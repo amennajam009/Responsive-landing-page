@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    padding: 36px 16%;
+    background: transparent;
+    transition: ease .40s;
+}
+.logo img{
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    display: inline-block;
+    color: #040000;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: all .40s ease;
+}
+.navlist a:hover{
+    background: #a32e37;
+    color: #fff;
+}
+.navlist a.active{
+    background: #a32e37;
+    color: #fff;
+}
+#menu-icon{
+    color: rgb(255, 255, 255);
+    font-size:40px ;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 0 16%;
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../pics/🥥.jfif);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1 1fr;
+    align-items: center;
+}
+.main-text h1{
+    font-size: 90px;
+    color: white;
+    max-width: 200px;
+   line-height: 1.1;
+   margin: 0 0 60px 0;
+
+}
+button{
+    background-color: #a32e37;
+    color: white;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .4s;
+    padding: 13px 30px;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid  #a32e37;
+    cursor: pointer;
+}
+
+@media(max-width:1330px) {
+    header{
+      padding: 10px 5%;
+    }
+    .main-text h1{
+        font-size: 80px;
+        transition: .3s;
+    }
+}
+@media(max-width:990px){
+    #media-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: rgba(8,5,0,0.9);
+        text-align: left;
+        transition: all .40s ease;
+    }
+    .navlist a{
+        display: block;
+        padding: 1rem;
+        margin: 0.5rem;
+        border-left: 2px solid #fff;
+        color: #fff;
+    }
+}
